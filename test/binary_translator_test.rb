@@ -24,4 +24,10 @@ class BinaryTranslatorTest < Minitest::Test
     assert_equal "", bt.translate("!@{$#%^&*()}")
   end
 
+  def test_that_binary_is_translated_to_text
+    bt = BinaryTranslator.new
+
+    assert_equal "hello world", bt.translate_to_text("001000000101001100001100001111000000010111001111010010001100000100")
+  end
+
 end
