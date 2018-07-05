@@ -2,6 +2,7 @@ require "pry"
 class BinaryTranslator
   def initialize
     @alpha_to_binary = {
+      " " => "000000",
       "a" => "000001",
       "b" => "000010",
       "c" => "000011",
@@ -30,7 +31,7 @@ class BinaryTranslator
       "z" => "011010"
     }
   end
-  
+
   def translate(string_to_translate)
     array_to_translate = string_to_translate.downcase.chars
     binary_array = array_to_translate.map do |letter|

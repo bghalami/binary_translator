@@ -15,7 +15,7 @@ class BinaryTranslatorTest < Minitest::Test
     bt = BinaryTranslator.new
 
     assert_equal "001000000101001100001100001111000000010111001111010010001100000100", bt.translate("Hello World!")
-    assert_equal "00000", bt.translate(" ")
+    assert_equal "000000", bt.translate(" ")
   end
 
   def test_characters_return_nothing
